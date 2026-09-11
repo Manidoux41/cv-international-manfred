@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CV — Manfred Parbatia | IT / Digital Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* ── Reset & globals ──────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy:   #0d2b45;
+  --blue:   #1a5276;
+  --mid:    #2e86c1;
+  --accent: #c0392b;
+  --gold:   #b8860b;
+  --light:  #eaf0f6;
+  --text:   #1c2833;
+  --muted:  #5d6d7e;
+  --border: #c8d6e2;
+  --white:  #ffffff;
+}
+
+body {
+  background: #cfd8dc;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 120%;
+  color: var(--text);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* ── Page ─────────────────────────────────────────────── */
+.page {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 20px auto;
+  background: var(--white);
+  display: grid;
+  grid-template-columns: 68mm 1fr;
+  position: relative;
+  box-shadow: 0 12px 50px rgba(0,0,0,0.25);
+}
+
+/* ── LEFT SIDEBAR ─────────────────────────────────────── */
+.sidebar {
+  background: var(--navy);
+  color: var(--white);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header band */
+.sidebar-header {
+  background: linear-gradient(160deg, #0d2b45 0%, #1a5276 100%);
+  padding: 28px 22px 24px;
+  text-align: center;
+  position: relative;
+}
+
+.sidebar-header::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: var(--gold);
+  margin: 14px auto 0;
+  border-radius: 2px;
+}
+
+.photo-wrap {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 3px solid var(--gold);
+  overflow: hidden;
+  margin: 0 auto 14px;
+  background: #2e86c1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  color: rgba(255,255,255,0.6);
+}
+
+.photo-wrap img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+
+.sidebar-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+.sidebar-title {
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: 6px;
+}
+
+/* Sidebar body */
+.sidebar-body {
+  padding: 20px 22px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* Section label */
+.s-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.s-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(184,134,11,0.35);
+}
+
+/* Contact */
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  margin-bottom: 8px;
+  font-size: 11.5px;
+  line-height: 1.45;
+}
+
+.contact-item i {
+  color: var(--gold);
+  font-size: 11px;
+  margin-top: 2px;
+  width: 14px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* Skills bars */
+.skill-row {
+  margin-bottom: 9px;
+}
+
+.skill-label {
+  font-size: 11px;
+  margin-bottom: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill-label span { color: rgba(255,255,255,0.55); font-size: 9.5px; }
+
+.bar-bg {
+  height: 4px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold), #e8b84b);
+  border-radius: 4px;
+}
+
+/* Languages */
+.lang-row {
+  margin-bottom: 8px;
+}
+
+.lang-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  margin-bottom: 4px;
+}
+
+.lang-level { color: rgba(255,255,255,0.5); font-size: 10px; }
+
+.lang-dots {
+  display: flex;
+  gap: 4px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+}
+
+.dot.on { background: var(--gold); }
+
+/* Certifications */
+.cert-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 8px;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.cert-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+/* ── MAIN ─────────────────────────────────────────────── */
+.main {
+  padding: 28px 28px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Top name bar */
+.main-header {
+  padding-bottom: 14px;
+  border-bottom: 2.5px solid var(--navy);
+}
+
+.main-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  color: var(--navy);
+  letter-spacing: 1px;
+  line-height: 1.1;
+}
+
+.main-role {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--mid);
+  margin-top: 4px;
+}
+
+/* Section title right side */
+.m-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.m-label i { color: var(--mid); font-size: 11px; }
+
+.m-label::after {
+  content: '';
+  flex: 1;
+  height: 1.5px;
+  background: var(--border);
+}
+
+/* Profile */
+.profile-text {
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: var(--text);
+  font-style: italic;
+  background: var(--light);
+  padding: 12px 15px;
+  border-left: 3px solid var(--mid);
+  border-radius: 0 4px 4px 0;
+}
+
+/* Job entries */
+.job {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 13px;
+  padding-bottom: 13px;
+  border-bottom: 1px dashed var(--border);
+}
+
+.job:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+.job-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 5px;
+  flex-wrap: wrap;
+}
+
+.job-title {
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--navy);
+  line-height: 1.35;
+}
+
+.job-company {
+  font-size: 11.5px;
+  color: var(--mid);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.job-date {
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--white);
+  background: var(--mid);
+  padding: 2px 8px;
+  border-radius: 20px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  letter-spacing: 0.3px;
+}
+
+.job ul {
+  padding-left: 0;
+  list-style: none;
+  margin-top: 4px;
+}
+
+.job li {
+  font-size: 11.5px;
+  line-height: 1.55;
+  color: var(--text);
+  margin-bottom: 2px;
+  padding-left: 12px;
+  position: relative;
+}
+
+.job li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-size: 10px;
+  top: 1px;
+}
+
+/* Formation */
+.edu-item {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed var(--border);
+}
+
+.edu-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+.edu-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.edu-title {
+  font-weight: 700;
+  font-size: 12.5px;
+  color: var(--navy);
+}
+
+.edu-school {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+/* Swiss flag badge */
+.swiss-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 2px 8px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+/* Footer strip */
+.page-footer {
+  background: var(--navy);
+  grid-column: 1 / -1;
+  padding: 7px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 9px;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.page-footer strong { color: var(--gold); }
+
+@media print {
+  body { background: white; }
+  .page { margin: 0; box-shadow: none; }
+}
+
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- ════════════════ SIDEBAR ════════════════ -->
+  <aside class="sidebar">
+
+    <div class="sidebar-header">
+      <div class="photo-wrap">
+        <img src="./img/0F36FD4E-BAAD-4786-AE41-A42B7172BAE6.jpeg" alt="profile picture">
+      </div>
+      <div class="sidebar-name">Manfred<br>Parbatia</div>
+      <div class="sidebar-title">IT / Digital Solutions</div>
+    </div>
+
+    <div class="sidebar-body">
+
+      <!-- Contact -->
+      <div>
+        <div class="s-label">Contact</div>
+          <div class="contact-item"><i class="fa-solid fa-location-dot"></i> Siem Reap, Cambodia<br><small style="color:rgba(255,255,255,0.5)">Full mobility - Cambodia</small></div>
+        <div class="contact-item"><i class="fa-solid fa-phone"></i> +33 6 74 96 44 68</div>
+        <div class="contact-item"><i class="fa-solid fa-envelope"></i> manfredparbatia@gmail.com</div>
+      </div>
+
+      <!-- Skills -->
+      <div>
+        <div class="s-label">Skills</div>
+
+        <div class="skill-row">
+          <div class="skill-label">Passenger transport driving <span>Expert</span></div>
+          <div class="bar-bg"><div class="bar-fill" style="width:95%"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-label">Passenger safety <span>Expert</span></div>
+          <div class="bar-bg"><div class="bar-fill" style="width:95%"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-label">School transport <span>Expert</span></div>
+          <div class="bar-bg"><div class="bar-fill" style="width:95%"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-label">Passenger relations <span>Advanced</span></div>
+          <div class="bar-bg"><div class="bar-fill" style="width:85%"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-label">Ticketing management <span>Advanced</span></div>
+          <div class="bar-bg"><div class="bar-fill" style="width:80%"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-label">Vehicle technical inspection <span>Advanced</span></div>
+          <div class="bar-bg"><div class="bar-fill" style="width:82%"></div></div>
+        </div>
+      </div>
+
+      <!-- Languages -->
+      <div>
+        <div class="s-label">Languages</div>
+
+        <div class="lang-row">
+          <div class="lang-meta"><span>French</span><span class="lang-level">Native language</span></div>
+          <div class="lang-dots">
+            <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div>
+          </div>
+        </div>
+        <div class="lang-row">
+          <div class="lang-meta"><span>English</span><span class="lang-level">Fluent - B2</span></div>
+          <div class="lang-dots">
+            <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div>
+          </div>
+        </div>
+        <div class="lang-row">
+          <div class="lang-meta"><span>German</span><span class="lang-level">Intermediate - B1</span></div>
+          <div class="lang-dots">
+            <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div><div class="dot"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div>
+        <div class="s-label">Certifications &amp; Licenses</div>
+        <div class="cert-item"><div class="cert-dot"></div><div><strong>Category B License</strong> - since April 1999</div></div>
+        <div class="cert-item"><div class="cert-dot"></div><div><strong>Category D License</strong> - Jan. 2025 -> Jul. 2029</div></div>
+        <div class="cert-item"><div class="cert-dot"></div><div><strong>International Driving Permit</strong></div></div>
+        <div class="cert-item"><div class="cert-dot"></div><div><strong>FIMO Passenger Transport</strong> - Dec. 2024 -> Jul. 2029</div></div>
+        <div class="cert-item"><div class="cert-dot"></div><div><strong>Digital Driver Card</strong></div></div>
+        <div class="cert-item"><div class="cert-dot"></div><div><strong>Medical Check-up</strong> - valid until 03/21/2028</div></div>
+      </div>
+
+    </div><!-- /sidebar-body -->
+  </aside>
+
+  <!-- ════════════════ MAIN ════════════════ -->
+  <main class="main">
+
+    <div class="main-header">
+      <div class="main-name">Manfred Parbatia</div>
+      <div class="main-role">Web &amp; Mobile Developer | IT &amp; Digital</div>
+    </div>
+
+    <!-- Profile -->
+    <div>
+      <div class="m-label"><i class="fa-solid fa-id-badge"></i>Professional profile</div>
+        <p class="profile-text">
+      Recently relocated to Siem Reap as part of a long-term expatriation project and a deliberate move toward a healthier pace of life, I am seeking an opportunity in information technology, digital projects, or hybrid tech-facing roles where I can contribute immediate practical value. My background combines hands-on expertise in web and mobile development with strong communication skills, customer-facing experience, and operational discipline. Fluent in French and English, I bring a reliable, adaptable, and solution-oriented approach to environments where usability, execution, and trust matter.      </p>
+    </div>
+
+    <!-- Experience -->
+    <div>
+      <div class="m-label"><i class="fa-solid fa-briefcase"></i>Professional experience</div>
+
+      <div class="job">
+        <div class="job-head">
+          <div>
+              <div class="job-title">Web &amp; Mobile Application Developer</div>
+              <div class="job-company">Independent / Technical expertise</div>
+            </div>
+            <div class="job-date">Ongoing</div>
+          </div>
+          <ul>
+            <li>Expert in React for building modern, responsive, user-focused web applications</li>
+            <li>Expert in React Native for delivering cross-platform mobile applications with a consistent user experience</li>
+            <li>Expert in Flutter for high-performance mobile application development</li>
+            <li>Translating user needs into practical digital solutions with a strong focus on usability and clarity</li>
+            <li>Recently combined my passion for driving and technology by developing MMCGO Drivers, a unique fleet-management and driver utility app designed for drivers of all types, available on <a href="https://play.google.com/store/apps/details?id=com.manidev41.mmcgodrivers&amp;hl=en-US&amp;ah=lx8CqM0OKLtQGnGMB7WGau287iU&amp;pli=1" target="_blank" rel="noopener noreferrer">Google Play</a></li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head">
+            <div>
+            <div class="job-title">Driver / Fare Collector</div>
+            <div class="job-company">Cars Dunois - RATP Dev Group &bull; Chateaudun (28)</div>
+          </div>
+          <div class="job-date">Dec. 2025 - Present</div>
+        </div>
+        <ul>
+          <li>Driving inter-departmental coaches on the Interurban Mobility network</li>
+          <li>Driving urban buses in the city of Chateaudun</li>
+          <li>Providing transport services for tourism-related journeys when required</li>
+          <li>Maintaining a high standard of passenger relations and front-line service</li>
+          <li>Cash collection, issuance, and management of group tickets</li>
+          <li>School and extracurricular transport</li>
+          <li>Compliance with safety instructions and traffic regulations</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <div class="job-title">School Coach Driver</div>
+            <div class="job-company">Societe des Cars Simplon &bull; Centre Region</div>
+          </div>
+          <div class="job-date">Feb. 2025 - Dec. 2025</div>
+        </div>
+        <ul>
+          <li>Transporting students to their school</li>
+          <li>Safe driving and strict compliance with traffic regulations</li>
+          <li>Technical checks before departure</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <div class="job-title">Private Hire Driver (VTC)</div>
+            <div class="job-company">TASM - Centre Val de Loire Region</div>
+          </div>
+          <div class="job-date">Aug. 2023 - Jan. 2025</div>
+        </div>
+        <ul>
+          <li>Transporting SNCF railway staff on defined routes</li>
+          <li>Strict compliance with schedules and procedures</li>
+          <li>Vehicle maintenance and cleanliness</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <div class="job-title">School Transport Escort Driver</div>
+            <div class="job-company">AADSP Transport &bull; Brou (28)</div>
+          </div>
+          <div class="job-date">Sep. 2022 - Oct. 2023</div>
+        </div>
+        <ul>
+          <li>School transport with student supervision</li>
+          <li>Monitoring, assistance, and implementation of safety guidelines</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <div class="job-title">MRO Operator (Maintenance, Repair &amp; Overhaul)</div>
+            <div class="job-company">SAFRAN Aerosystem Hydraulics &bull; Chateaudun (28)</div>
+          </div>
+          <div class="job-date">Oct. 2018 - Aug. 2022</div>
+        </div>
+        <ul>
+          <li>Disassembly and reassembly of hydraulic aeronautical equipment</li>
+          <li>Writing technical reports in English according to the CMM standard</li>
+          <li>Part145 certification - aeronautical training and authorization</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Education -->
+    <div>
+      <div class="m-label"><i class="fa-solid fa-graduation-cap"></i>Education</div>
+
+      <div class="edu-item">
+        <div class="edu-head">
+          <div>
+            <div class="edu-title">French Baccalaureate - Literary Stream, Advanced Option</div>
+            <div class="edu-school">Lycee A. Bouvet, Saint-Benoit, Reunion Island</div>
+          </div>
+          <div class="job-date">1999</div>
+        </div>
+      </div>
+
+      <div class="edu-item">
+        <div class="edu-head">
+          <div>
+            <div class="edu-title">Professional Qualification - Public Road Passenger Transport Driver</div>
+            <div class="edu-school">Promotrans, Vendome (41)</div>
+          </div>
+          <div class="job-date">Sep. - Dec. 2024</div>
+        </div>
+      </div>
+
+      <div class="edu-item">
+        <div class="edu-head">
+          <div>
+            <div class="edu-title">Associate Degree (Bac +2) - Web Developer Integrator</div>
+            <div class="edu-school">OpenClassrooms (Fully remote)</div>
+          </div>
+          <div class="job-date">Aug. 2022 - Jul. 2023</div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <div class="page-footer">
+    <span>Based in Siem Reap · Web &amp; Mobile Development · French / English</span>
+  </div>
+
+</div><!-- /page -->
+
+</body>
+</html>

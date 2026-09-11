@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV - Manfred Parbatia | Operations, Guest Relations &amp; Digital Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --navy: #1f4051;
+  --blue: #c5e0e7;
+  --mid: #4f899d;
+  --gold: #805a12;
+  --light: #f2f8f9;
+  --text: #1e303a;
+  --muted: #506570;
+  --border: #cbdde3;
+  --white: #fffefd;
+}
+body {
+  background: #f4f8f9;
+  color: var(--text);
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 120%;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.page {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 20px auto;
+  background: var(--white);
+  display: grid;
+  grid-template-columns: 68mm 1fr;
+  box-shadow: 0 8px 24px rgba(38,59,72,.12);
+}
+.sidebar {
+  background: #dbecef;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+}
+.sidebar-header {
+  background: linear-gradient(160deg, #f4fafb 0%, #cfe7ec 100%);
+  padding: 28px 21px 24px;
+  text-align: center;
+}
+.photo-wrap {
+  width: 90px;
+  height: 135px;
+  margin: 0 auto 14px;
+  overflow: hidden;
+  border: 3px solid var(--gold);
+  border-radius: 45px;
+}
+.photo-wrap img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.sidebar-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+.sidebar-title {
+  margin-top: 7px;
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+.sidebar-body { padding: 21px 21px 24px; display: flex; flex-direction: column; gap: 22px; }
+.s-label, .m-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.s-label { color: var(--gold); }
+.s-label::after, .m-label::after { content: ''; flex: 1; height: 1px; background: rgba(184,134,11,.45); }
+.contact-item { display: flex; gap: 9px; margin-bottom: 9px; font-size: 11.5px; line-height: 1.45; }
+.contact-item i { width: 14px; flex-shrink: 0; margin-top: 3px; color: var(--gold); text-align: center; }
+.skill-row { margin-bottom: 10px; }
+.skill-label { display: flex; justify-content: space-between; gap: 6px; margin-bottom: 4px; font-size: 11px; line-height: 1.25; }
+.skill-label span { color: var(--muted); font-size: 9.5px; }
+.bar-bg { height: 4px; overflow: hidden; background: rgba(38,59,72,.12); border-radius: 4px; }
+.bar-fill { height: 100%; background: linear-gradient(90deg, var(--gold), #e8b84b); border-radius: 4px; }
+.lang-row { margin-bottom: 9px; }
+.lang-meta { display: flex; justify-content: space-between; gap: 6px; font-size: 11px; line-height: 1.3; }
+.lang-level { color: var(--muted); font-size: 9.5px; text-align: right; }
+.lang-dots { display: flex; gap: 4px; margin-top: 4px; }
+.dot { width: 8px; height: 8px; background: rgba(38,59,72,.14); border-radius: 50%; }
+.dot.on { background: var(--gold); }
+.cert-item { display: flex; gap: 8px; margin-bottom: 8px; font-size: 10.8px; line-height: 1.35; }
+.cert-dot { width: 6px; height: 6px; flex-shrink: 0; margin-top: 5px; background: var(--gold); border-radius: 50%; }
+.status-item { display: flex; gap: 8px; margin-bottom: 8px; font-size: 10.8px; line-height: 1.35; }
+.status-item strong { color: var(--gold); font-weight: 600; }
+.main { padding: 29px 28px 25px; }
+.main-header { padding-bottom: 14px; border-bottom: 2px solid var(--navy); }
+.main-name { color: var(--navy); font-family: 'Playfair Display', serif; font-size: 29px; line-height: 1.05; }
+.main-role { margin-top: 6px; color: var(--mid); font-size: 11.5px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; }
+.section { margin-top: 18px; }
+.m-label { color: var(--navy); }
+.m-label i { color: var(--mid); font-size: 12px; }
+.m-label::after { background: var(--border); }
+.profile-text { padding: 12px 15px; border-left: 3px solid var(--mid); background: var(--light); color: var(--text); font-size: 12.5px; font-style: italic; line-height: 1.58; }
+.job { padding-bottom: 12px; margin-bottom: 12px; border-bottom: 1px dashed var(--border); }
+.job:last-child { padding-bottom: 0; margin-bottom: 0; border-bottom: 0; }
+.job-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; margin-bottom: 4px; }
+.job-title { color: var(--navy); font-size: 13px; font-weight: 700; line-height: 1.3; }
+.job-company { margin-top: 2px; color: var(--mid); font-size: 11px; font-weight: 600; line-height: 1.3; }
+.job-date { flex-shrink: 0; padding: 3px 8px; background: var(--mid); color: var(--text); border-radius: 20px; font-size: 9.5px; font-weight: 600; line-height: 1.2; white-space: nowrap; }
+.job ul { list-style: none; margin-top: 5px; }
+.job li { position: relative; padding-left: 12px; margin-bottom: 2px; color: var(--text); font-size: 11px; line-height: 1.4; }
+.job li::before { content: '\25B8'; position: absolute; left: 0; color: var(--gold); }
+.edu-item { padding-bottom: 9px; margin-bottom: 9px; border-bottom: 1px dashed var(--border); }
+.edu-item:last-child { padding-bottom: 0; margin-bottom: 0; border-bottom: 0; }
+.edu-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+.edu-title { color: var(--navy); font-size: 11.8px; font-weight: 700; line-height: 1.3; }
+.edu-school { margin-top: 2px; color: var(--muted); font-size: 10.5px; line-height: 1.3; }
+.stack { margin-top: 3px; color: var(--muted); font-size: 10px; line-height: 1.3; }
+.footer { grid-column: 1 / -1; padding: 7px 28px; background: var(--light); color: var(--muted); font-size: 9px; letter-spacing: 1px; text-align: center; text-transform: uppercase; border-top: 1px solid var(--border); }
+.footer strong { color: var(--gold); }
+@media print {
+  @page { size: A4; margin: 0; }
+  body { background: #fff; font-size: 108%; }
+  .page {
+    width: 210mm;
+    height: 297mm;
+    min-height: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 68mm 1fr;
+    box-shadow: none;
+    overflow: hidden;
+  }
+  .sidebar, .footer { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  .sidebar { background: #f3f9fa; }
+  .sidebar-header { background: #fbfefe; }
+  .footer { background: #fff; }
+  .job, .edu-item, .section { break-inside: avoid; page-break-inside: avoid; }
+  .sidebar-header { padding: 23px 18px 19px; }
+  .photo-wrap { width: 82px; height: 123px; margin-bottom: 11px; }
+  .sidebar-name { font-size: 21px; }
+  .sidebar-title { font-size: 12.5px; }
+  .sidebar-body { padding: 17px 17px 19px; gap: 16px; }
+  .contact-item, .cert-item, .status-item { font-size: 11.3px; }
+  .skill-label, .lang-meta { font-size: 11.5px; }
+  .main { padding: 23px 22px 18px; }
+  .section { margin-top: 14px; }
+  .main-header { padding-bottom: 11px; }
+  .main-name { font-size: 31px; }
+  .main-role { font-size: 12px; }
+  .m-label { font-size: 10.5px; margin-bottom: 9px; }
+  .profile-text { padding: 10px 12px; font-size: 13px; line-height: 1.4; }
+  .job { padding-bottom: 9px; margin-bottom: 9px; }
+  .job-title { font-size: 13.5px; }
+  .job-company { font-size: 11.5px; }
+  .job li { font-size: 11.5px; line-height: 1.3; margin-bottom: 2px; }
+  .edu-item { padding-bottom: 7px; margin-bottom: 7px; }
+  .edu-title { font-size: 12.2px; }
+  .edu-school { font-size: 10.8px; }
+  .footer { padding: 5px 22px; }
+}
+@media screen and (max-width: 800px) {
+  body { background: #fff; }
+  .page { width: 100%; margin: 0; grid-template-columns: 1fr; }
+  .sidebar { display: block; }
+  .sidebar-body { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+  .main { padding: 24px 20px; }
+  .footer { grid-column: auto; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="photo-wrap"><img src="./img/moi-photo.jpg" alt="Portrait of Manfred Parbatia"></div>
+      <div class="sidebar-name">Manfred<br>Parbatia</div>
+      <div class="sidebar-title">Operations, guest relations<br>&amp; digital solutions</div>
+    </div>
+    <div class="sidebar-body">
+      <section>
+        <div class="s-label">Contact</div>
+        <div class="contact-item"><i class="fa-solid fa-location-dot"></i><span>Siem Reap, Cambodia<br><small>Also based in Mondoubleau, France<br>Relocating to Siem Reap</small></span></div>
+        <div class="contact-item"><i class="fa-solid fa-phone"></i><span>+855 76 252 3154</span></div>
+        <div class="contact-item"><i class="fa-solid fa-envelope"></i><span>manfredparbatia@gmail.com</span></div>
+        <div class="contact-item"><i class="fa-brands fa-linkedin"></i><span>LinkedIn profile available</span></div>
+      </section>
+      <section>
+        <div class="s-label">Core strengths</div>
+        <div class="skill-row"><div class="skill-label">Guest &amp; client relations <span>Expert</span></div><div class="bar-bg"><div class="bar-fill" style="width:95%"></div></div></div>
+        <div class="skill-row"><div class="skill-label">Safety &amp; compliance <span>Expert</span></div><div class="bar-bg"><div class="bar-fill" style="width:95%"></div></div></div>
+        <div class="skill-row"><div class="skill-label">Technical reporting <span>Advanced</span></div><div class="bar-bg"><div class="bar-fill" style="width:85%"></div></div></div>
+        <div class="skill-row"><div class="skill-label">Logistics coordination <span>Advanced</span></div><div class="bar-bg"><div class="bar-fill" style="width:82%"></div></div></div>
+        <div class="skill-row"><div class="skill-label">Digital &amp; web solutions <span>Advanced</span></div><div class="bar-bg"><div class="bar-fill" style="width:82%"></div></div></div>
+      </section>
+      <section>
+        <div class="s-label">Languages</div>
+        <div class="lang-row"><div class="lang-meta"><span>French</span><span class="lang-level">Native</span></div><div class="lang-dots"><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i></div></div>
+        <div class="lang-row"><div class="lang-meta"><span>English</span><span class="lang-level">Fluent</span></div><div class="lang-dots"><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot"></i></div></div>
+        <div class="lang-row"><div class="lang-meta"><span>German</span><span class="lang-level">Intermediate</span></div><div class="lang-dots"><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot"></i><i class="dot"></i></div></div>
+      </section>
+      <section>
+        <div class="s-label">Certifications</div>
+        <div class="cert-item"><i class="cert-dot"></i><span>SST - Certified First Aider</span></div>
+        <div class="cert-item"><i class="cert-dot"></i><span>Fire Safety &amp; Evacuation</span></div>
+        <div class="cert-item"><i class="cert-dot"></i><span>Driving licences: Category B &amp; D</span></div>
+      </section>
+      <section>
+        <div class="s-label">Immigration status</div>
+        <div class="status-item"><i class="cert-dot"></i><span><strong>Cambodian work permit</strong><br>Valid until 31 Dec. 2026</span></div>
+        <div class="status-item"><i class="cert-dot"></i><span><strong>One-year visa</strong><br>Valid until 26 Sep. 2027</span></div>
+      </section>
+    </div>
+  </aside>
+  <main class="main">
+    <header class="main-header">
+      <div class="main-name">Manfred Parbatia</div>
+      <div class="main-role">Operational reliability &middot; Human connection &middot; Digital agility</div>
+    </header>
+    <section class="section">
+      <div class="m-label"><i class="fa-solid fa-id-badge"></i>Professional summary</div>
+      <p class="profile-text">Customer-focused and safety-certified professional combining technical operations, passenger transport, client service, logistics and web development. Bilingual French/English, seeking an operational, guest relations or coordination role in Siem Reap's hospitality or NGO sector.</p>
+    </section>
+    <section class="section">
+      <div class="m-label"><i class="fa-solid fa-briefcase"></i>Relevant professional experience</div>
+      <article class="job"><div class="job-head"><div><div class="job-title">Passenger Transport &amp; Client Care Specialist</div><div class="job-company">Cars Simplon / TASM / Promotrans - France</div></div><div class="job-date">2022 - Present</div></div><ul><li>Provide safe, timely transport and premium assistance for school groups, SNCF professionals and other passengers.</li><li>Maintain vehicle readiness, safety compliance and calm dispute resolution.</li><li>Adapt service to diverse passengers while respecting schedules and operational procedures.</li></ul></article>
+      <article class="job"><div class="job-head"><div><div class="job-title">MRO Technical Operator &amp; Reporting Technician</div><div class="job-company">Safran Aerosystems Hydraulics - Chateaudun, France</div></div><div class="job-date">2018 - 2022</div></div><ul><li>Repaired and tested critical aerospace hydraulic components under PART 145 standards.</li><li>Prepared technical inspection and repair reports in English using Component Maintenance Manuals.</li><li>Worked with multidisciplinary teams to meet demanding quality and turnaround targets.</li></ul></article>
+      <article class="job"><div class="job-head"><div><div class="job-title">Industrial Production &amp; Quality Controller</div><div class="job-company">Hutchinson Paulstra / SICTA / Inergy Automotive - France</div></div><div class="job-date">2007 - 2018</div></div><ul><li>Handled precision manufacturing, quality inspection, automated systems and level-one maintenance.</li><li>Performed endoscope inspections with close attention to safety, consistency and detail.</li></ul></article>
+      <article class="job"><div class="job-head"><div><div class="job-title">Insurance &amp; Commercial Advisor</div><div class="job-company">GAN Assurances - Besancon, France</div></div><div class="job-date">2005 - 2008</div></div><ul><li>Managed client portfolios, identified needs and built trust through tailored advice.</li><li>Recommended suitable financial products through clear, proactive communication.</li></ul></article>
+      <article class="job"><div class="job-head"><div><div class="job-title">Press Correspondent &amp; Content Contributor</div><div class="job-company">Societe Alsacienne de Publication (Le Pays) - Belfort, France</div></div><div class="job-date">2002 - 2004</div></div><ul><li>Researched events, conducted interviews and wrote published articles and photo features.</li><li>Contributed to regional gazette columns requiring editorial judgement and storytelling.</li></ul></article>
+    </section>
+    <section class="section">
+      <div class="m-label"><i class="fa-solid fa-graduation-cap"></i>Education &amp; professional training</div>
+      <div class="edu-item"><div class="edu-head"><div><div class="edu-title">Khmer Language Courses</div><div class="edu-school">Be Like Khmer School - Siem Reap, Cambodia</div></div><div class="job-date">Since 26 Aug. 2026</div></div></div>
+      <div class="edu-item"><div class="edu-head"><div><div class="edu-title">Full-Stack Web Development Program</div><div class="edu-school">OpenClassrooms - Full remote, France</div><div class="stack">HTML5, CSS3, JavaScript, React, Node.js, PHP, MongoDB</div></div><div class="job-date">2022 - Present</div></div></div>
+      <div class="edu-item"><div class="edu-head"><div><div class="edu-title">Professional Certification: Commercial &amp; Sales Agent</div><div class="edu-school">AFPA - Besancon, France</div></div><div class="job-date">2005 - 2006</div></div></div>
+      <div class="edu-item"><div class="edu-head"><div><div class="edu-title">Insurance &amp; Financial Services Diploma</div><div class="edu-school">Bac +2 / BTS level - Franche-Comte Formation, Besancon</div></div><div class="job-date">2005 - 2007</div></div></div>
+      <div class="edu-item"><div class="edu-head"><div><div class="edu-title">Higher Education Diploma in Law</div><div class="edu-school">DEUG Droits, University of Reunion Island - Saint-Denis</div></div><div class="job-date">1999 - 2001</div></div></div>
+      <div class="edu-item"><div class="edu-head"><div><div class="edu-title">French Baccalaureate - Literature</div></div><div class="job-date">1999</div></div></div>
+    </section>
+  </main>
+  <footer class="footer"><strong>Available for Siem Reap opportunities</strong> &middot; French / English bilingual &middot; Operations, service &amp; coordination</footer>
+</div>
+</body>
+</html>

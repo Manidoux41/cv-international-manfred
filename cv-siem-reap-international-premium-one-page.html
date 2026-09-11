@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>International CV — Manfred Parbatia | One Page</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy: #16232f;
+  --blue: #23465a;
+  --mid: #3f6c73;
+  --gold: #c49a57;
+  --light: #f4efe8;
+  --text: #1f2a30;
+  --muted: #66757f;
+  --border: #d8cec1;
+  --white: #fffdf9;
+}
+
+body {
+  background: linear-gradient(135deg, #d6d0c7 0%, #bcc8cc 100%);
+  font-family: 'Manrope', sans-serif;
+  font-size: 120%;
+  color: var(--text);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.page {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 16px auto;
+  background: var(--white);
+  display: grid;
+  grid-template-columns: 66mm 1fr;
+  box-shadow: 0 18px 60px rgba(16,28,36,0.28);
+}
+
+.sidebar {
+  background: var(--navy);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  background: linear-gradient(160deg, #16232f 0%, #345361 100%);
+  padding: 24px 20px 20px;
+  text-align: center;
+}
+
+.photo-wrap {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  border: 3px solid var(--gold);
+  overflow: hidden;
+  margin: 0 auto 12px;
+}
+
+.photo-wrap img { width: 100%; height: 100%; object-fit: cover; }
+
+.sidebar-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18.5px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.sidebar-title {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: 6px;
+}
+
+.sidebar-body {
+  padding: 15px 19px 17px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.s-label, .m-label {
+  font-size: 9.8px;
+  font-weight: 700;
+  letter-spacing: 2.3px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 8px;
+}
+
+.s-label { color: var(--gold); }
+.m-label { color: var(--navy); }
+
+.s-label::after, .m-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(255,255,255,0.18);
+}
+
+.m-label::after { background: var(--border); height: 1.5px; }
+.m-label i { color: var(--mid); font-size: 12px; }
+
+.contact-item, .cert-item {
+  display: flex;
+  gap: 8px;
+  font-size: 11.2px;
+  line-height: 1.4;
+  margin-bottom: 5px;
+}
+
+.contact-item i { color: var(--gold); width: 14px; margin-top: 2px; font-size: 12px; }
+
+.skill-row { margin-bottom: 8px; }
+.skill-label { font-size: 11.2px; margin-bottom: 4px; display: flex; justify-content: space-between; }
+.skill-label span { color: rgba(255,255,255,0.55); font-size: 9.8px; }
+.bar-bg { height: 4px; background: rgba(255,255,255,0.12); border-radius: 4px; overflow: hidden; }
+.bar-fill { height: 100%; background: linear-gradient(90deg, var(--gold), #e8b84b); }
+
+.lang-row { margin-bottom: 7px; }
+.lang-meta { display: flex; justify-content: space-between; font-size: 11px; margin-bottom: 3px; }
+.lang-level { color: rgba(255,255,255,0.5); font-size: 9.8px; }
+.lang-dots { display: flex; gap: 4px; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.15); }
+.dot.on { background: var(--gold); }
+
+.cert-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); margin-top: 5px; flex-shrink: 0; }
+
+.main {
+  padding: 24px 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.main-header { padding-bottom: 12px; border-bottom: 2.5px solid var(--navy); }
+
+.main-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 29px;
+  color: var(--navy);
+  line-height: 1.05;
+}
+
+.main-role {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+  color: var(--mid);
+  margin-top: 4px;
+}
+
+.profile-text {
+  font-size: 11.8px;
+  line-height: 1.52;
+  color: var(--text);
+  background: var(--light);
+  padding: 10px 12px;
+  border-left: 3px solid var(--mid);
+  border-radius: 0 4px 4px 0;
+}
+
+.job {
+  margin-bottom: 9px;
+  padding-bottom: 9px;
+  border-bottom: 1px dashed var(--border);
+}
+
+.job:last-child, .edu-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+
+.job-head, .edu-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 3px;
+}
+
+.job-title, .edu-title { font-weight: 700; font-size: 12.8px; color: var(--navy); }
+.job-company, .edu-school { font-size: 11.2px; color: var(--muted); margin-top: 1px; }
+
+.job-date {
+  font-size: 10.8px;
+  font-weight: 600;
+  color: var(--white);
+  background: var(--mid);
+  padding: 2px 8px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.job ul {
+  padding-left: 0;
+  list-style: none;
+  margin-top: 3px;
+}
+
+.job li {
+  font-size: 11.1px;
+  line-height: 1.42;
+  margin-bottom: 1px;
+  padding-left: 12px;
+  position: relative;
+}
+
+.job li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-size: 10px;
+}
+
+.page-footer {
+  background: var(--navy);
+  grid-column: 1 / -1;
+  padding: 9px 24px;
+  font-size: 9.8px;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.footer-row strong {
+  color: rgba(255,255,255,0.9);
+}
+
+.footer-links {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.footer-links a {
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  font-size: 9.8px;
+  letter-spacing: 0.6px;
+  text-transform: none;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+.footer-links i {
+  margin-right: 4px;
+}
+
+@media print {
+  body { background: white; }
+  .page { margin: 0; box-shadow: none; }
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="photo-wrap">
+        <img src="./img/0F36FD4E-BAAD-4786-AE41-A42B7172BAE6.jpeg" alt="profile picture">
+      </div>
+      <div class="sidebar-name">Manfred<br>Parbatia</div>
+      <div class="sidebar-title">International Profile</div>
+    </div>
+
+    <div class="sidebar-body">
+      <div>
+        <div class="s-label">Contact</div>
+        <div class="contact-item"><i class="fa-solid fa-location-dot"></i> Siem Reap, Cambodia</div>
+        <div class="contact-item"><i class="fa-solid fa-phone"></i> +33 6 74 96 44 68</div>
+        <div class="contact-item"><i class="fa-solid fa-mobile-screen-button"></i> +855 9 65 640 224 (valid from our arrival on August 24, 2026)</div>
+        <div class="contact-item"><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/33674964468" target="_blank" rel="noopener noreferrer" style="color:rgba(255,255,255,0.9); text-decoration:none;">WhatsApp</a></div>
+        <div class="contact-item"><i class="fa-brands fa-telegram"></i> <a href="tg://resolve?phone=33674964468" style="color:rgba(255,255,255,0.9); text-decoration:none;">Telegram</a></div>
+        <div class="contact-item"><i class="fa-solid fa-envelope"></i> manfredparbatia@gmail.com</div>
+      </div>
+
+      <div>
+        <div class="s-label">Core skills</div>
+        <div class="skill-row"><div class="skill-label">Client experience <span>Strong</span></div><div class="bar-bg"><div class="bar-fill" style="width:92%"></div></div></div>
+        <div class="skill-row"><div class="skill-label">Public-facing communication <span>Strong</span></div><div class="bar-bg"><div class="bar-fill" style="width:92%"></div></div></div>
+        <div class="skill-row"><div class="skill-label">Web &amp; mobile development <span>Expert</span></div><div class="bar-bg"><div class="bar-fill" style="width:95%"></div></div></div>
+        <div class="skill-row"><div class="skill-label">Operational reliability <span>Advanced</span></div><div class="bar-bg"><div class="bar-fill" style="width:88%"></div></div></div>
+      </div>
+
+      <div>
+        <div class="s-label">Languages</div>
+        <div class="lang-row"><div class="lang-meta"><span>French</span><span class="lang-level">Native</span></div><div class="lang-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div></div></div>
+        <div class="lang-row"><div class="lang-meta"><span>English</span><span class="lang-level">Fluent</span></div><div class="lang-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div></div></div>
+      </div>
+
+      <div>
+        <div class="s-label">Licenses</div>
+        <div class="cert-item"><div class="cert-dot"></div><div><strong>Category B License</strong> - since April 1999</div></div>
+        <div class="cert-item"><div class="cert-dot"></div><div><strong>Category D License</strong> - Jan. 2025 -> Jul. 2029</div></div>
+        <div class="cert-item"><div class="cert-dot"></div><div><strong>International Driving Permit</strong></div></div>
+        <div class="cert-item"><div class="cert-dot"></div><div><strong>FIMO Passenger Transport</strong> - Dec. 2024 -> Jul. 2029</div></div>
+        <div class="cert-item"><div class="cert-dot"></div><div><strong>Digital Driver Card</strong></div></div>
+        <div class="cert-item"><div class="cert-dot"></div><div><strong>Medical Check-up</strong> - valid until 03/21/2028</div></div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="main-header">
+      <div class="main-name">Manfred Parbatia</div>
+      <div class="main-role">Public Relations | Client Experience | Digital Projects</div>
+    </div>
+
+    <div>
+      <div class="m-label"><i class="fa-solid fa-id-badge"></i>Professional profile</div>
+      <p class="profile-text">Internationally minded and based in Siem Reap, I combine public-facing operations, multilingual communication, customer experience, and hands-on digital expertise. I am seeking a role in public relations, client experience, operations support, or digital projects where interpersonal presence and practical execution are equally valued.</p>
+    </div>
+
+    <div>
+      <div class="m-label"><i class="fa-solid fa-bolt"></i>Key strengths</div>
+      <p class="profile-text">Cross-cultural communication • Client-facing professionalism • Mobile and web product execution • Service quality and operational discipline</p>
+    </div>
+
+    <div>
+      <div class="m-label"><i class="fa-solid fa-briefcase"></i>Selected experience</div>
+
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <div class="job-title">Web &amp; Mobile Application Developer</div>
+            <div class="job-company">Independent / Technical expertise</div>
+          </div>
+          <div class="job-date">Ongoing</div>
+        </div>
+        <ul>
+          <li>Expert in React, React Native, and Flutter for practical, user-focused digital products</li>
+          <li>Developed MMCGO Drivers, a fleet-management and driver utility application published on <a href="https://play.google.com/store/apps/details?id=com.manidev41.mmcgodrivers&amp;hl=en-US&amp;ah=lx8CqM0OKLtQGnGMB7WGau287iU&amp;pli=1" target="_blank" rel="noopener noreferrer">Google Play</a></li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <div class="job-title">Driver / Fare Collector</div>
+            <div class="job-company">Cars Dunois - RATP Dev Group</div>
+          </div>
+          <div class="job-date">2025 - Present</div>
+        </div>
+        <ul>
+          <li>Public-facing transport operations across interurban, urban, school, and tourism-related services</li>
+          <li>High standard of passenger relations, service continuity, and operational discipline</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <div class="job-title">School Coach Driver</div>
+            <div class="job-company">Societe des Cars Simplon</div>
+          </div>
+          <div class="job-date">2025</div>
+        </div>
+        <ul>
+          <li>Managed safe student transport with strict route discipline and pre-departure technical checks</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <div class="job-title">MRO Operator</div>
+            <div class="job-company">Safran Aerosystem Hydraulics</div>
+          </div>
+          <div class="job-date">2018 - 2022</div>
+        </div>
+        <ul>
+          <li>Produced technical work and English-language reporting in a high-standard aeronautical environment</li>
+        </ul>
+      </div>
+    </div>
+
+    <div>
+      <div class="m-label"><i class="fa-solid fa-diagram-project"></i>Flagship project</div>
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <div class="job-title">MMCGO Drivers</div>
+            <div class="job-company">Fleet management and driver utility application</div>
+          </div>
+          <div class="job-date">Published</div>
+        </div>
+        <ul>
+          <li>Designed and developed a unique mobile application combining fleet-management features with practical tools for professional drivers of all types</li>
+          <li>Built the product from a real-world operational perspective, linking my field experience in transport with my technical expertise in mobile development</li>
+          <li>Published the application on <a href="https://play.google.com/store/apps/details?id=com.manidev41.mmcgodrivers&amp;hl=en-US&amp;ah=lx8CqM0OKLtQGnGMB7WGau287iU&amp;pli=1" target="_blank" rel="noopener noreferrer">Google Play</a> with a focus on usability, driver relevance, and everyday efficiency</li>
+        </ul>
+      </div>
+    </div>
+
+    <div>
+      <div class="m-label"><i class="fa-solid fa-graduation-cap"></i>Education</div>
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <div class="edu-title">Associate Degree (Bac +2) - Web Developer Integrator</div>
+            <div class="edu-school">OpenClassrooms</div>
+          </div>
+          <div class="job-date">2022 - 2023</div>
+        </div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-head">
+          <div>
+            <div class="edu-title">French Baccalaureate - Literary Stream, Advanced Option</div>
+            <div class="edu-school">Lycee A. Bouvet, Reunion Island</div>
+          </div>
+          <div class="job-date">1999</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="page-footer">
+    <div class="footer-row">
+      <span><strong>Siem Reap, Cambodia</strong></span>
+      <span>French / English</span>
+      <span>International mobility</span>
+    </div>
+    <div class="footer-row">
+      <span>Available from September 1, 2026</span>
+      <span>Category D License valid to Jul. 2029</span>
+      <span>International Driving Permit · FIMO</span>
+    </div>
+    <div class="footer-row">
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/manfred-p-804a72198/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+        <a href="https://github.com/Manidoux41/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i>GitHub</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
